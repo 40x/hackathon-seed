@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-strict-di>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="src/assets/images/favicon.ico">
+		<title>Seed App</title>
+
+        <!-- bower:css -->
+        <link rel='stylesheet' href='bower_components/font-awesome/css/font-awesome.css' />
+        <!-- endbower -->
+
+        <!-- inject:css -->
+        <link rel="stylesheet" href="/dist/css/index.css">
+        <!-- endinject -->
+
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+	</head>
+	<body ng-controller="AppController as appVm">
+
+        <div ui-view></div>
+
+        <!-- bower:js -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <!-- endbower -->
+
+        <!-- inject:js -->
+        <script src="/src/app.module.js"></script>
+        <script src="/src/features/home/home.module.js"></script>
+        <script src="/src/app.controller.js"></script>
+        <script src="/src/features/home/home.controller.js"></script>
+        <!-- endinject -->
+
+    </body>
+</html>
