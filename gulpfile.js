@@ -18,7 +18,7 @@ gulp.task('sass', function(){
 
 //reload when something changes once scss is converted to css
 gulp.task('trigger-reload', ['sass'], function(){
-    liveReload.reload();
+    liveReload.reload('./index.html');
 });
 
 //inject once scss is converted to css

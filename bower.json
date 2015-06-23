@@ -10,5 +10,10 @@
     "bootstrap": "~3.3.5",
     "modernizr": "~2.8.3",
     "font-awesome": "~4.3.0"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": "./dist/css/bootstrap.css"
+    }
   }
 }

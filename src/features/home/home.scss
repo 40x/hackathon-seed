@@ -1,7 +1,14 @@
-.home {
-  width: 100px;
+body {
+  background: red;
 
-  .nested{
-    width: 2px;
+  .fa-globe {
+
+    &:hover {
+      background: white;
+    }
+
   }
+
+
+
 }
