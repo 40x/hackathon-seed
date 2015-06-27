@@ -3,19 +3,14 @@
 </div>
 <div class="col-md-12">
     <div class="col-md-9">
-        <!--<audio controls>-->
-            <!--<source ng-src="headerVm.currentSong" type="audio/mpeg">-->
-            <!--Your browser does not support the audio element.-->
-        <!--</audio>-->
-        <!--<div ng-repeat="item in headerVm.list">-->
-            <!--{{item.display}}-->
-        <!--</div>-->
+
     </div>
     <div class="col-md-3">
         <span>
-            <i class="fa fa-search" ng-click="headerVm.search()"></i>
+            <i class="fa fa-search"></i>
             <input type="text" ng-model="headerVm.searchText" placeholder="Seach for tracks,artits,genres" size="30"
-                   typeahead="display for display in headerVm.search($viewValue)" class="form-control">
+                   typeahead="display for display in headerVm.search($viewValue)" class="form-control"
+                   typeahead-on-select="headerVm.onSelect($item, $model, $label)">
         </span>
     </div>
 </div>

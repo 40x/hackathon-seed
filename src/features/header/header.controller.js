@@ -2,13 +2,14 @@
     'use strict';
 
     angular.module('app').controller('HeaderController', HeaderControllerFn );
-    HeaderControllerFn.$inject = ['beatsService'];
+    HeaderControllerFn.$inject = ['beatsService','$state'];
 
-    function HeaderControllerFn (beatsService) {
+    function HeaderControllerFn (beatsService, $state) {
         var headerVm = this;
         headerVm.search = search;
-        headerVm.success = success;
+        headerVm.searchSuccess = searchSuccess;
         headerVm.error = error;
+        headerVm.onSelect = onSelect;
 
         function search(item){
             var paramsObj = {
@@ -16,18 +17,22 @@
                 'client_id' : 'pqqpeejv5hfstfxmub7xz4uv'
             };
 
-            return beatsService.getAllData(paramsObj).then(success,error);
+            return beatsService.getAllData(paramsObj).then(searchSuccess,error);
         }
 
-        function success(res) {
-            headerVm.list = res.data;
-            return headerVm.list.map(function(item){
+        function searchSuccess(res) {
+            headerVm.searchList = res.data;
+            return headerVm.searchList.map(function(item){
                 return item.display;
             });
         }
 
         function error(res) {
             console.log(res);
+        }
+
+        function onSelect($item, $model, $label) {
+            $state.go('app.search', {searchText : headerVm.searchText});
         }
     }
 
