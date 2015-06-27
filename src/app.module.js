@@ -23,7 +23,11 @@
             .state('app', {
                 url: '^/app',
                 abstract: true,
-                template: '<div ui-view></div>'
+                views: {
+                    'header@' : {templateUrl: 'src/features/header/header.html'},
+                    'content@': {template : '<div ui-view></div>'},
+                    'footer@':  {templateUrl: 'src/features/footer/footer.html'}
+                }
             });
     }
 
