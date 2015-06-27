@@ -8,11 +8,12 @@
         var beatsServiceVm = this;
         beatsServiceVm.getAllData = getAllData;
 
-        function getAllData() {
+        function getAllData(paramsObj) {
             var deferred = $q.defer();
 
             var request = {
-                url: 'https://partner.api.beatsmusic.com/v1/api/search/predictive?q=dr+dre&client_id=pqqpeejv5hfstfxmub7xz4uv',
+                url: 'https://partner.api.beatsmusic.com/v1/api/search/predictive',
+                params : paramsObj,
                 method: 'GET'
             };
 
