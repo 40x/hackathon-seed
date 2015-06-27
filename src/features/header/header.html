@@ -1,1 +1,17 @@
-header
+<div class="header">
+    <h2>Hackathon-Music app</h2>
+</div>
+<div class="col-md-12">
+    <div class="col-md-9">
+        {{headerVm.list}}
+    </div>
+    <div class="col-md-3">
+        <span>
+            <i class="fa fa-search" ng-click="headerVm.search()"></i>
+            <input class="word-wrap" type="search" ng-model="headerVm.searchText" placeholder="Seach for tracks,artits,genres" size="30">
+        </span>
+    </div>
+</div>
+<div>
+    nav bar will go here
+</div>

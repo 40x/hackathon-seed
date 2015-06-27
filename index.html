@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app" ng-strict-di manifest="appcache.manifest">
+<html lang="en" ng-app="app" ng-strict-di>
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -40,12 +40,14 @@
 
         <!-- inject:js -->
         <script src="/src/app.module.js"></script>
-        <script src="/src/features/radio/radio.module.js"></script>
         <script src="/src/features/home/home.module.js"></script>
+        <script src="/src/features/radio/radio.module.js"></script>
         <script src="/src/app.controller.js"></script>
-        <script src="/src/features/radio/radio.controller.js"></script>
+        <script src="/src/features/header/header.controller.js"></script>
         <script src="/src/features/home/home.controller.js"></script>
+        <script src="/src/features/radio/radio.controller.js"></script>
         <script src="/src/features/radio/radio.service.js"></script>
+        <script src="src/components/beatsService.js"></script>
         <!-- endinject -->
 
     </body>
