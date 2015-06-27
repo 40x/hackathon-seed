@@ -5,6 +5,7 @@
             //external
             'ui.router',
             'ui.bootstrap',
+            'ngSanitize',
 
             //internal modules
             'home',
