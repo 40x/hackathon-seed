@@ -2,7 +2,7 @@
 <html lang="en" ng-app="app" ng-strict-di>
 	<head>
 		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="src/assets/images/favicon.ico">
 		<title>Seed App</title>
@@ -20,7 +20,9 @@
 	</head>
 	<body ng-controller="AppController as appVm">
 
-        <div ui-view></div>
+        <div ui-view="header"></div>
+        <div ui-view="content"></div>
+        <div ui-view="footer"></div>
 
         <!-- bower:js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
