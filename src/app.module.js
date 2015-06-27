@@ -7,7 +7,8 @@
             'ui.bootstrap',
 
             //internal modules
-            'home'
+            'home',
+            'app.radio'
 
     ]).config(config);
 

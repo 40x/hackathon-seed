@@ -1,6 +1,7 @@
 (function(angular) {
     var RadioController = ['$http','radioService',function($http,radioService){
     	var vm = this;
+
         var onOK = function(response){
             console.log(response.data);
         }
@@ -9,5 +10,5 @@
     }];
 
     angular.module('app.radio')
-    .controller(RadioController)
-}(angular))
+    .controller('radioController',RadioController)
+}(angular));

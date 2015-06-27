@@ -1,5 +1,6 @@
 (function(angular) {
     var config = ['$stateProvider',function($stateProvider){
+    	console.log('in config');
     	$stateProvider.state('app.radio',{
     		url : '/radio',
     		controller : 'radioController',
