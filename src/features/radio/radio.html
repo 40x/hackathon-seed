@@ -1,16 +1,18 @@
 <section class="radio">
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-12">
-			<h4>Select Channel</h4>
-				<div class="station-container" ng-repeat = "value in rc.radioMgr.pgMgr.artistList track by $index" ng-click="rc.radioMgr.pgMgr.getTrackForArtist(value)">
-				<img class="artist" src="{{value.images[0].url}}">
-				<span>{{value.name}}</span>
-				</div>
-			</div>
-		</div>
-		<audio id="player">
-			<source ng-repeat = "value in rc.previews" src="{{value}}"></audio>
-		</audio>
-	</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h4>Select Channel</h4>
+                <div class="station-container" ng-repeat="value in rc.radioMgr.pgMgr.artistList track by $index" ng-click="rc.radioMgr.pgMgr.getTrackForArtist(value)">
+                    <img class="artist" src="{{value.images[0].url}}">
+                    <span>{{value.name}}</span>
+                </div>
+            </div>
+        </div>
+        <div id="audioContainer">
+            <audio controls id="player">
+                <source id="playerSrc" src="" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
 </section>

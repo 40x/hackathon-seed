@@ -15,9 +15,6 @@
   "overrides": {
     "bootstrap": {
       "main": "./dist/css/bootstrap.css"
-    },
-    "angular-sanitize": {
-      "main": "./angular-sanitize.js"
     }
   },
   "resolutions": {
