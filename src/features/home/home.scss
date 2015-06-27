@@ -1,14 +1,9 @@
+
+$color-light: #fff;
+
+
 body {
-  background: red;
-
-  .fa-globe {
-
-    &:hover {
-      background: white;
-    }
-
-  }
-
-
-
+  font-family: "Avenir Next", "Nunito", "Helvetica";
+  color: $color-light;
+  background-image: url('../../src/assets/images/music.jpg');
 }

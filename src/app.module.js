@@ -24,6 +24,7 @@
                 url: '^/app',
                 abstract: true,
                 views: {
+                    'leftNav@' : {templateUrl: 'src/features/left-nav/left-nav.html'},
                     'header@' : {templateUrl: 'src/features/header/header.html'},
                     'content@': {template : '<div ui-view></div>'},
                     'footer@':  {templateUrl: 'src/features/footer/footer.html'}
