@@ -3,12 +3,17 @@
 </div>
 <div class="col-md-12">
     <div class="col-md-9">
-        {{headerVm.list}}
+        <!--<audio controls>-->
+            <!--<source ng-src="headerVm.currentSong" type="audio/mpeg">-->
+            <!--Your browser does not support the audio element.-->
+        <!--</audio>-->
+        <!--{{headerVm.list}}-->
     </div>
     <div class="col-md-3">
         <span>
             <i class="fa fa-search" ng-click="headerVm.search()"></i>
-            <input class="word-wrap" type="search" ng-model="headerVm.searchText" placeholder="Seach for tracks,artits,genres" size="30">
+            <input type="text" ng-model="headerVm.searchText" placeholder="Seach for tracks,artits,genres" size="30"
+                   typeahead="address for address in getLocation($viewValue)" class="form-control">
         </span>
     </div>
 </div>
