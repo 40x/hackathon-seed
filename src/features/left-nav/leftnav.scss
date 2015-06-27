@@ -1,9 +1,25 @@
-.leftnav {
+.leftnav-container {
 
-  .row {
-    height: calc(33.33vh);
+
+  .leftnav {
+
+    .row {
+      height: calc(33.33vh);
+      text-align: center;
+      position: relative;
+
+      &:hover {
+        background: rgba(255,255,255, 0.1);
+      }
+    }
+
+
+    i {
+      position: absolute;
+      top:50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
   }
-
-
-
 }

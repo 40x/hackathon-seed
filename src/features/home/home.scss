@@ -2,8 +2,49 @@
 $color-light: #fff;
 
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: "Avenir Next", "Nunito", "Helvetica";
   color: $color-light;
   background-image: url('../../src/assets/images/music.jpg');
+  background-attachment: fixed;
+  background-size: contain;
+  height: 100%;
+}
+
+.dark-overlay {
+  background: rgba(0,0,0,0.65);
+}
+
+.content-container{
+
+  >div {
+    padding: 2rem;
+  }
+
+}
+
+video {
+  display: none;
+}
+
+@media (min-width: 500px) {
+  video {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url('../../src/assets/images/music.jpg') no-repeat;
+    background-size: cover;
+  }
 }

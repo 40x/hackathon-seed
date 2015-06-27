@@ -10,12 +10,20 @@
         headerVm.success = success;
         headerVm.error = error;
 
-        function search(){
-            beatsService.getAllData().then(success,error);
+        function search(item){
+            var paramsObj = {
+                'q' : item,
+                'client_id' : 'pqqpeejv5hfstfxmub7xz4uv'
+            };
+
+            return beatsService.getAllData(paramsObj).then(success,error);
         }
 
         function success(res) {
             headerVm.list = res.data;
+            return headerVm.list.map(function(item){
+                return item.display;
+            });
         }
 
         function error(res) {
