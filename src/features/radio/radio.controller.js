@@ -22,9 +22,9 @@
             self.setThumbNailsForArtistsOnStart = function() {
                 self.artistList.forEach(function(el) {
                     if (el.images.length === 0) {
-                        el.images[0] = {
+                        el.images.push({
                             url: 'http://www.cs.colostate.edu/~plquinon/ct310/project3/Images/admin.png'
-                        }
+                        });
                     }
                 });
             };
