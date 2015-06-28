@@ -31,6 +31,7 @@ gulp.task('inject',['sass'], function () {
                     'src/**/*.directive.js', //load all directives
                     'src/**/*.factory.js', //load all factories
                     'src/**/*.service.js', //load all services
+                    'src/**/*.filter.js', //load all services
                     'dist/css/*.css' //pick the concatenated css from the converted scss files
 
                     ], {read: false});

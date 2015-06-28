@@ -10,7 +10,8 @@
             //internal modules
             'home',
             'app.radio',
-            'app.search'
+            'app.search',
+            'genre'
 
     ]).config(config);
 
@@ -35,6 +36,8 @@
                     'footer@':  {templateUrl: 'src/features/footer/footer.html'}
                 }
             });
+
+
     }
 
 })();
