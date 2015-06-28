@@ -1,12 +1,18 @@
-.search-content {
-  .song-name {
-    width: 30%;
+.song-name {
+    width: 100%;
     float: left;
-    margin: 10px;
+    margin: 10px auto;
     padding: 5px;
     background: rgba(255, 255, 255, 0.1);
     height: 120px;
     overflow: hidden;
+  }
+
+
+@media  (min-width: 500px) {
+  .song-name {
+    width: 30%;
+    margin: 10px;
   }
 }
 
