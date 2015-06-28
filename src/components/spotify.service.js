@@ -9,7 +9,7 @@
         var spotifyServiceFnVm = this;
         spotifyServiceFnVm.getMeTheSong = getMeTheSong;
         spotifyServiceFnVm.getNewReleases = getNewReleases;
-        spotifyServiceFnVm.token = "BQCk3saxkE05OAfGK0wJ8_9pTHfdCqzePONUUDsBzMg0Rf0-6c8Y0IeplOnPE7aJpXnlUhxaLp8OMCevzxR9UYph3RWInH5xIWWHdw5CQ9be3Y1GecOz2WBaKW9soN-ua3wk2hvNgOdj1ttggnzc_lMSavcSp4sVGseqnE3Kb90flBf4XzWa60Vts_kElWGx9QWctlVgYkyrYcjdo4PJq-nI_N-afqLT9gwFr1Q41TfcCUdn2XuGc2lVZ4JvFhLT42fJh6o3ZPbGYjWTwe2qrdGD1wGMjKXlQAG83iIbEJDiY1c";
+        spotifyServiceFnVm.token = "BQBxRwccFbhONQ-TDAqIJYv5wSNZW9UJASZvdh2cmYjKU4YE-9qegpIXvWxD2WhlN052T6Fe17LehdLkcz1yUYHLYCtdCwS5TxAGNdhIYBtVHLfyxhPa5IBFj0Jd8UBhaGTIMD1WY-puUgIM9bJTJFzAU_kvZp6y18cwq0t4OKYm04Ob3PTuulCeDmuaRyIp0qK4Nc_9ZSQL7V8FA1HGvibTLPxfbVg3e078avOAnBM_DXhX6YpYOc8AeroZUGiDGZe_KmU8KZiYjH-VzIpQioRi4tP6RYNzCKXvSyKTxLC9_7g";
 
         function getMeTheSong(query)  {
 
