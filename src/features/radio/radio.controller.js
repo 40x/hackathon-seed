@@ -5,9 +5,11 @@
             return id === vm.radioMgr.pgMgr.selectedArtist.id;
         };
         vm.radioMgr = new RadioManager;
-        vm.radioMgr.loadArtistsOnStart();
-
-
+        vm.radioMgr.loadArtists('tania*');
+        vm.searchText = "";
+        vm.searchEntry=function(){
+            vm.radioMgr.loadArtists(vm.searchText + '*');
+        };
 
         function RadioPageManager() {
             var self = this;
@@ -44,10 +46,14 @@
         function RadioManager() {
             var self = this;
             self.artistLoadFail = true;
-
             self.pgMgr = new RadioPageManager();
-
-            self.loadArtistsOnStart = function() {
+            self.searchForArtists = function(queryString){
+                return radioService.getSomeArtists(queryString+'*')
+                    .then(function(response){
+                        return response.data.artists.items;
+                    });
+            };
+            self.loadArtists = function(queryString) {
                 var onOK = function(response) {
                     self.artistLoadFail = false;
                     self.pgMgr.artistList = response.data.artists.items;
@@ -57,7 +63,7 @@
                 var onFail = function(response) {
                     self.artistLoadFail = true;
                 };
-                radioService.getSomeArtists('tania*')
+                radioService.getSomeArtists(queryString)
                     .then(onOK);
             };
         }

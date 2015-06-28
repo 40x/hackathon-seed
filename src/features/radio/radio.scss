@@ -2,9 +2,12 @@
     .station-container {
         width: 150px;
         height: 150px;
-        padding: 20px 50px 20px 50px;
+        padding: 20px 0px 20px 50px;
         display: inline-block;
         float: left;
+    }
+    .channel-search{
+    	padding-right : 30px;
     }
     .radio-now-playing {
         border-bottom: 1px solid white;
