@@ -19,7 +19,13 @@
                         return  beatsService.getAllGenre();
                     }
                 }
-            });
+            })
+            .state('app.playlists', {
+                url: '/playlists',
+                templateUrl: 'src/features/moods/partials/playlists.html',
+                controller: 'playListController',
+                controllerAs: 'plVm'
+            })
     }
 
 })();

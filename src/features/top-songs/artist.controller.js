@@ -11,9 +11,11 @@
 
     function ArtistControllerFn(trackTransfer, spotifyService, $scope, $state){
         var ac = this;
+        ac.topSongs = [];
         ac.topSongs = trackTransfer.getTracks();
         if(!ac.topSongs) {
-            $state.go('app.topSongs');
+            if(localStorage.getItem('artist-source') === 'top-songs')$state.go('app.topSongs');
+            else $state.go('app.genre');
         }
         ac.playSong = playSong;
         ac.playSuccess = playSuccess;

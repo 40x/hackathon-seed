@@ -9,55 +9,19 @@
 
 .moods {
 
-  .genre-name {
-    height: 100px;
-    width: 30%;
-    float: left;
-    @include tile(10px);
-  }
-
-  .child-genre {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
   .genre-lists {
     padding: 10px;
     @include tile(10px);
   }
 
-  ul {
-    height: 100px;
-    list-style: none;
-    overflow-y: hidden;
-    overflow-x: auto;
-  }
-
-  .indent {
-
-    &:hover {
-      text-indent: 20px;
-      background: rgba(0,0,0,0.6);
-    }
-  }
-
-
-
-  .right-arrow {
-    box-shadow: -5px -5px 50px -10px #fff inset;
-
-    >i:nth-child(1) {
-      margin-right: 10px;
-    }
-  }
-
-  .arrow-container {
-    position: relative;
-  }
-
 }
 
+
+.vertical-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
 i, .pointer {
   &:hover {

@@ -21,6 +21,7 @@
         function showTracks( content){
             trackTransfer.setTracks(content.refs.tracks);
             sl.selectedName = content.name || content.title;
+            localStorage.setItem('artist-source', 'top-songs');
             $state.go('app.artist', {artist: sl.selectedName });
         }
 

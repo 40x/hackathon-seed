@@ -11,6 +11,13 @@
             return tt.tracks;
         };
 
+        tt.setPlayList = function(pl){
+            tt.pl = pl;
+        };
+        tt.getPlayList = function(){
+            return tt.pl;
+        };
+
         return tt;
     }
 }(angular));
