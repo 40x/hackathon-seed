@@ -1,6 +1,9 @@
 (function(){
 
-    angular.module('home', ['ui.router', 'ui.bootstrap']).config(config);
+    angular.module('app.home', [
+        'ui.router',
+        'ui.bootstrap'
+    ]).config(config);
 
     config.$inject = ['$stateProvider'];
 

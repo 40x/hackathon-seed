@@ -42,7 +42,7 @@
 
         function getCurrentGenre(start, end){
             genreVm.displayGenre = angular.copy(genreVm.content.slice(start,end));
-            console.log(genreVm.displayGenre, start, end);
+
         }
 
         function showNext() {

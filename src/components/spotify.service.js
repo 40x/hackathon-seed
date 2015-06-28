@@ -8,7 +8,7 @@
 
         var spotifyServiceFnVm = this;
         spotifyServiceFnVm.getMeTheSong = getMeTheSong;
-        spotifyServiceFnVm.token = "BQC-fm1BVaeybPhC51qJQ6NWg9LpxK8Ty7bThYjol6aO3redEWVLZixHTHJBM1EbpCA8awpgkkSS7ZPH0otoB_ja3qEuTe-vD7WpuW26zNvk0c8bvbm6aoe1zc3vrpCEnCa8RSg7GPs";
+        spotifyServiceFnVm.token = "BQC7hw7z64cPgMy7dRgkPHTkIXnXzrn4cWUSS4_k6d-5JMkcJDihHrJqqjqd5hVZe96kt7lUFFFNB2QXrwsfnVQWQE_qE89T4arQwzmROErFIzB-KhcJqD06hpUZRccbtxIFCBN0tbqbTODtsTqfMD3jkkAt6kNwEJAV3aNhb-SGhxVgPNT1jPYKtK4gq-UsMBA3ODRKEDmXVfTpjGGQJL8mHUJ6vpf968xrEu7oTn-MtJ2vl1msMh6PZA0AQUp2W7h_auGh-OxdoYnYePABCEIRJuykXcCtnlY63y6LRnYjqAk";
 
         function getMeTheSong(query)  {
 

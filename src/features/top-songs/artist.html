@@ -1,0 +1,15 @@
+<div class="clearfix">
+    <div ng-repeat="item in ac.topSongs track by $index"
+         ng-click="ac.playSong($index, item.display);"
+         class="text-center song-name pointer">
+        <div>{{item.display}}</div>
+        <div class="fa-3x">
+            <div class="fa fa-play fa-1x" ng-if="!item.playing"></div>
+            <div class="fa fa-stop" ng-if="item.playing"></div>
+        </div>
+        <div ng-class="{'playing-animation' : item.playing}"></div>
+    </div>
+    <audio id="playMe">
+        <source ng-src="">
+    </audio>
+</div>

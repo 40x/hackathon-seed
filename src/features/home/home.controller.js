@@ -1,7 +1,8 @@
 (function() {
     'use strict';
 
-    angular.module('app').controller('HomeController', HomeControllerFn );
+    angular.module('app.home')
+        .controller('HomeController', HomeControllerFn );
 
     function HomeControllerFn () {
         var homeVm = this;

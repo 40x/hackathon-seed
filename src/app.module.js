@@ -8,10 +8,11 @@
             'ngSanitize',
 
             //internal modules
-            'home',
+            'app.home',
             'app.radio',
             'app.search',
-            'genre'
+            'genre',
+            'app.topSongs'
 
     ]).config(config);
 
