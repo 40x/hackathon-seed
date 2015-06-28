@@ -9,7 +9,8 @@
 
             //internal modules
             'home',
-            'app.radio'
+            'app.radio',
+            'app.search'
 
     ]).config(config);
 
