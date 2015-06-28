@@ -16,16 +16,22 @@
     @include tile(10px);
   }
 
+  .child-genre {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
   .genre-lists {
     padding: 10px;
     @include tile(10px);
   }
 
   ul {
-      height: 100px;
-      list-style: none;
-      overflow-y: hidden;
-      overflow-x: auto;
+    height: 100px;
+    list-style: none;
+    overflow-y: hidden;
+    overflow-x: auto;
   }
 
   .indent {

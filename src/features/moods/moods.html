@@ -10,7 +10,7 @@
             <ul class="row clearfix genre-carousal">
                 <li ng-repeat="genre in genreVm.displayGenre" class="genre-name text-center pointer"
                     ng-click="genreVm.selectedGenre = genre.name; genreVm.tracks = null;  genreVm.getGenreById(genre.id)">
-                    <div ng-bind="genre.name | sanitize"></div>
+                    <div ng-bind="genre.name | sanitize" class="child-genre"></div>
                 </li>
             </ul>
         </div>
