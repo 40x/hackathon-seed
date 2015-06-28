@@ -10,7 +10,6 @@
         scVm.playSong = playSong;
         scVm.playSuccess = playSuccess;
         scVm.error = error;
-        scVm.playing = false;
         scVm.index = 0;
 
         (scVm.onSelectList).forEach(function(e, i){
