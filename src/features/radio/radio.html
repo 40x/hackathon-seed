@@ -15,9 +15,12 @@
         <div class="row">
             <div class="col-xs-12">
                 <div class="station-container" ng-repeat="value in rc.radioMgr.pgMgr.artistList track by $index" ng-click="rc.radioMgr.pgMgr.getTrackForArtist(value)">
-                    <div ng-class="{'selected-artist':rc.isSelected(value.id)}" class="">
-                        <img class="artist" src="{{value.images[0].url}}">
-                        <span>{{value.name}}</span>
+                    <div>
+                        <img class="artist" src="{{value.images[0].url}}" ng-class="{'selected-artist':rc.isSelected(value.id)}">
+                        <div class="artist-name">{{value.name}}</div>
+                        <div class="artist-overlay" ng-show="!rc.radioMgr.pgMgr.playing && rc.isSelected(value.id)"><i class="fa fa-play"></i></div>
+                        <div class="artist-non-select-overlay" ng-show="!rc.isSelected(value.id)"><i class="fa fa-play"></i></div>
+                        <div class="artist-overlay" ng-show="rc.radioMgr.pgMgr.playing && rc.isSelected(value.id)"><i class="fa fa-pause"></i></div>
                     </div>
                 </div>
             </div>

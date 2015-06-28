@@ -2,6 +2,7 @@
     angular.module('app.radio')
         .service('playerService', ['$timeout', '$sce', function($timeout, $sce) {
             var self = this;
+            var player = playerSrc = audioContainer = null;
             var shuffle = function(array) {
                 //from http://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
                 var currentIndex = array.length,
@@ -24,14 +25,18 @@
             self.registerAudioElement = function(id) {
                 self.elementId = id;
             }
+            self.pause = function(){
+                player[0].pause();
+            };
+            self.resume = function(){
+                player[0].play();
+            }
             self.playTrackList = function(tracks) {
                 var trackUrlList = [];
                 tracks.forEach(function(el) {
                     trackUrlList.push(el.preview_url);
                 });
-                var audioContainer = $("#" + self.elementId + "-container");
-                var player = playerSrc = null;
-                var duration = 0;
+                audioContainer = $("#" + self.elementId + "-container");
                 var totalSongs = tracks.length;
                 var playATrack = function(index) {
                     audioContainer.empty();

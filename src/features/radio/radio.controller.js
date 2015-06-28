@@ -1,13 +1,13 @@
 (function(angular) {
-    var RadioController = ['$http', 'radioService','playerService', function($http, radioService, playerService) {
+    var RadioController = ['$http', 'radioService', 'playerService', function($http, radioService, playerService) {
         var vm = this;
-        vm.isSelected=function(id){
+        vm.isSelected = function(id) {
             return id === vm.radioMgr.pgMgr.selectedArtist.id;
         };
         vm.radioMgr = new RadioManager;
         vm.radioMgr.loadArtists('tania*');
         vm.searchText = "";
-        vm.searchEntry=function(){
+        vm.searchEntry = function() {
             vm.radioMgr.loadArtists(vm.searchText + '*');
         };
 
@@ -17,6 +17,7 @@
             self.selectedArtist = {};
             self.artistSelected = false;
             self.tracksLoadFailed = true;
+            self.playing = false;
             self.artistList = [];
             self.artistTrackList = [];
             self.setThumbNailsForArtistsOnStart = function() {
@@ -32,9 +33,24 @@
                 var onOK = function(response) {
                     self.tracksLoadFailed = false;
                     self.artistTrackList = response.data.tracks;
-                    self.selectedArtist = artist;
-                    self.artistSelected = true;
-                    playerService.playTrackList(self.artistTrackList);
+                    if (self.selectedArtist === artist) {
+                        if(self.playing){
+                            self.playing=false;
+                            //pause here
+                            playerService.pause();
+                        }
+                        else{
+                            self.playing = true;
+                            //resume here.
+                            playerService.resume();
+                        }
+                    } 
+                    else {
+                        self.selectedArtist = artist;
+                        self.artistSelected = true;
+                        self.playing = true;
+                        playerService.playTrackList(self.artistTrackList);
+                    }
                 };
                 var onFail = function(response) {
                     self.tracksLoadFailed = true;
@@ -48,9 +64,9 @@
             var self = this;
             self.artistLoadFail = true;
             self.pgMgr = new RadioPageManager();
-            self.searchForArtists = function(queryString){
-                return radioService.getSomeArtists(queryString+'*')
-                    .then(function(response){
+            self.searchForArtists = function(queryString) {
+                return radioService.getSomeArtists(queryString + '*')
+                    .then(function(response) {
                         return response.data.artists.items;
                     });
             };
