@@ -1,0 +1,47 @@
+@mixin tile($margin) {
+  margin: $margin;
+  background: rgba(255,255,255,0.1);
+
+  &:hover {
+    background: rgba(255,255,255,0.4);
+  }
+}
+
+.moods {
+
+  .genre-name {
+    height: 100px;
+    width: 30%;
+    float: left;
+    @include tile(10px);
+  }
+
+  .genre-lists {
+    padding: 10px;
+    @include tile(10px);
+  }
+
+  ul {
+      height: 100px;
+      list-style: none;
+      overflow-y: hidden;
+      overflow-x: auto;
+  }
+
+  .indent {
+
+    &:hover {
+      text-indent: 20px;
+      background: rgba(0,0,0,0.6);
+    }
+  }
+
+  .left-arrow {
+    box-shadow: 15px 0 50px -10px #fff inset;
+  }
+
+  .right-arrow {
+    box-shadow: -15px 0 50px -10px #fff inset;
+  }
+
+}
