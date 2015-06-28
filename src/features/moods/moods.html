@@ -1,34 +1,33 @@
 <div class="moods">
 
-    <div class="row">
-        <span class="col-md-1 text-center fa-2x " ng-class="{'left-arrow' : genreVm.startIndex !== 0 }" >
+    <div class="row arrow-container">
+        <div class="col-md-1 text-center fa-2x right-arrow ">
             <i class="fa fa-angle-double-left" ng-click="genreVm.showPrevious()" ng-hide="genreVm.startIndex === 0"></i>
-        </span>
-        <div class="col-md-10">
+            <i class="fa fa-angle-double-right" ng-click="genreVm.showNext()" ng-hide="genreVm.endIndex === genreVm.content.length"></i>
+        </div>
+
+        <div class="col-md-11 col-md-offset-1">
             <ul class="row clearfix genre-carousal">
-                <li ng-repeat="genre in genreVm.displayGenre" class="genre-name text-center"
+                <li ng-repeat="genre in genreVm.displayGenre" class="genre-name text-center pointer"
                     ng-click="genreVm.selectedGenre = genre.name; genreVm.tracks = null;  genreVm.getGenreById(genre.id)">
-                    <div ng-bind="genre.name"></div>
+                    <div ng-bind="genre.name | sanitize"></div>
                 </li>
             </ul>
         </div>
-        <span class="col-md-1 text-center fa-2x"  ng-class="{'right-arrow' : genreVm.endIndex !== genreVm.content.length }">
-            <i class="fa fa-angle-double-right" ng-click="genreVm.showNext()" ng-hide="genreVm.endIndex === genreVm.content.length"></i>
-        </span>
     </div>
 
     <div ng-if="genreVm.selectedGenre">
-        <h3>{{genreVm.selectedGenre}}</h3>
+        <h3 class="text-center">{{genreVm.selectedGenre | sanitize}}</h3>
         <div class="row">
             <div class="col-md-3 genre-lists">
                 <div ng-repeat="list in genreVm.dataByIdList">
-                    <div ng-click="genreVm.tracks = list.refs.tracks" class="indent">
+                    <div ng-click="genreVm.tracks = list.refs.tracks" class="indent pointer">
                         {{list.name}}
                     </div>
                 </div>
             </div>
             <div class="col-md-8 genre-lists" ng-if=" genreVm.tracks">
-                <div ng-repeat="track in genreVm.tracks" class="indent">
+                <div ng-repeat="track in genreVm.tracks" class="indent pointer">
                     {{track.display}}
                 </div>
             </div>

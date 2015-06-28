@@ -36,12 +36,34 @@
     }
   }
 
-  .left-arrow {
-    box-shadow: 15px 0 50px -10px #fff inset;
-  }
+
 
   .right-arrow {
-    box-shadow: -15px 0 50px -10px #fff inset;
+    box-shadow: -5px -5px 50px -10px #fff inset;
+
+    >i:nth-child(1) {
+      margin-right: 10px;
+    }
   }
 
+  .arrow-container {
+    position: relative;
+  }
+
+}
+
+
+i, .pointer {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 970px) {
+  .right-arrow {
+    box-shadow: -5px -5px 50px -10px #fff inset;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
