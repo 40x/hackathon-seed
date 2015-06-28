@@ -1,18 +1,18 @@
 (function(angular) {
     var RadioController = ['$http', 'radioService','playerService', function($http, radioService, playerService) {
         var vm = this;
-
+        vm.isSelected=function(id){
+            return id === vm.radioMgr.pgMgr.selectedArtist.id;
+        };
         vm.radioMgr = new RadioManager;
         vm.radioMgr.loadArtistsOnStart();
-        vm.previews = [
-            'https://p.scdn.co/mp3-preview/fa7061f7112d69c2352ee904b5425f2d068153c6',
-            'https://p.scdn.co/mp3-preview/3742af306537513a4f446d7c8f9cdb1cea6e36d1'
-        ];
+
 
 
         function RadioPageManager() {
             var self = this;
-            var defaultArtistImgUrl = '/resources/img/admin.png';
+            playerService.registerAudioElement("player");
+            self.selectedArtist = {};
             self.tracksLoadFailed = true;
             self.artistList = [];
             self.artistTrackList = [];
@@ -34,6 +34,8 @@
                 var onFail = function(response) {
                     self.tracksLoadFailed = true;
                 };
+                self.selectedArtist = artist;
+                console.log(artist);
                 radioService.getTracksForArtist(artist.id, "US").then(onOK, onFail);
             };
         }

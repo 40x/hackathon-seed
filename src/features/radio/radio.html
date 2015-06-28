@@ -2,16 +2,24 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h4>Select Channel</h4>
+                <h4>Channels</h4>
                 <div class="station-container" ng-repeat="value in rc.radioMgr.pgMgr.artistList track by $index" ng-click="rc.radioMgr.pgMgr.getTrackForArtist(value)">
-                    <img class="artist" src="{{value.images[0].url}}">
-                    <span>{{value.name}}</span>
+                    <div ng-class="{'selected-artist':rc.isSelected(value.id)}" class="">
+                        <img class="artist" src="{{value.images[0].url}}">
+                        <span>{{value.name}}</span>
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="audioContainer">
+        <div class="row radio-now-playing">
+            <div class="col-xs-12 radio-current-channel">
+                <h4 ng-show="rc.radioMgr.pgMgr.artistTrackList.length===0">No channel selected</h4>
+                <h4 ng-show="rc.radioMgr.pgMgr.artistTrackList.length!==0">Playing {{rc.radioMgr.pgMgr.artistTrackList.length}} track(s) from {{rc.radioMgr.pgMgr.selectedArtist.name}}</h4>
+            </div>
+        </div>
+        <div class="col-xs-12" id="player-container">
             <audio controls id="player">
-                <source id="playerSrc" src="" type="audio/mpeg">
+                <source id="player-src" src="" type="audio/mpeg">
             </audio>
         </div>
     </div>
