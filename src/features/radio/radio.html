@@ -1,6 +1,6 @@
 <section class="radio">
     <div class="container">
-        <div class="row">
+        <div class="row search-row">
             <div class="col-xs-8">
                 <h4>Channels</h4>
             </div>
@@ -24,8 +24,9 @@
         </div>
         <div class="row radio-now-playing">
             <div class="col-xs-12 radio-current-channel">
-                <h4 ng-show="rc.radioMgr.pgMgr.artistTrackList.length===0">No channel selected</h4>
-                <h4 ng-show="rc.radioMgr.pgMgr.artistTrackList.length!==0">Playing {{rc.radioMgr.pgMgr.artistTrackList.length}} track(s) from {{rc.radioMgr.pgMgr.selectedArtist.name}}</h4>
+            	<h4 ng-show="rc.radioMgr.pgMgr.artistSelected === false">No Channel Selected</h4>
+                <h4 ng-show="rc.radioMgr.pgMgr.artistSelected === true && rc.radioMgr.pgMgr.artistTrackList.length===0">No tracks available for {{rc.radioMgr.pgMgr.selectedArtist.name}}</h4>
+                <h4 ng-show="rc.radioMgr.pgMgr.artistSelected === true && rc.radioMgr.pgMgr.artistTrackList.length!==0">Playing {{rc.radioMgr.pgMgr.artistTrackList.length}} track(s) from {{rc.radioMgr.pgMgr.selectedArtist.name}}</h4>
             </div>
         </div>
         <div class="col-xs-12" id="player-container">

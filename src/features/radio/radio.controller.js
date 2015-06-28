@@ -15,6 +15,7 @@
             var self = this;
             playerService.registerAudioElement("player");
             self.selectedArtist = {};
+            self.artistSelected = false;
             self.tracksLoadFailed = true;
             self.artistList = [];
             self.artistTrackList = [];
@@ -31,13 +32,13 @@
                 var onOK = function(response) {
                     self.tracksLoadFailed = false;
                     self.artistTrackList = response.data.tracks;
+                    self.selectedArtist = artist;
+                    self.artistSelected = true;
                     playerService.playTrackList(self.artistTrackList);
                 };
                 var onFail = function(response) {
                     self.tracksLoadFailed = true;
                 };
-                self.selectedArtist = artist;
-                console.log(artist);
                 radioService.getTracksForArtist(artist.id, "US").then(onOK, onFail);
             };
         }
