@@ -1,13 +1,9 @@
-<div class="header">
+<div class="header jumbotron text-center">
     <h2>Hackathon-Music app</h2>
 </div>
-<div class="col-md-12">
-    <div class="col-md-9">
-
-    </div>
+<div class="row">
     <div class="col-md-3">
         <span>
-            <i class="fa fa-search"></i>
             <input type="text" ng-model="headerVm.searchText" placeholder="Seach for tracks,artits,genres" size="30"
                    typeahead="display for display in headerVm.search($viewValue)" class="form-control"
                    typeahead-on-select="headerVm.onSelect($item, $model, $label)">
