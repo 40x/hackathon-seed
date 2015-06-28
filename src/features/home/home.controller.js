@@ -2,9 +2,9 @@
     'use strict';
 
     angular.module('app').controller('HomeController', HomeControllerFn );
-    HomeControllerFn.$inject = ['spotifyService'];
+    HomeControllerFn.$inject = ['spotifyService', '$scope'];
 
-    function HomeControllerFn (spotifyService) {
+    function HomeControllerFn (spotifyService, $scope) {
         var homeVm = this;
         homeVm.init = init;
         homeVm.getNewSuccess = getNewSuccess;
