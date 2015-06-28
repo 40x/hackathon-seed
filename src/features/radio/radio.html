@@ -1,15 +1,15 @@
 <section class="radio">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row search-row">
             <div class="col-md-8">
                 <h4>Channels</h4>
             </div>
             <div class="col-md-4 channel-search">
-           	 <input type='text' ng-model='rc.searchText' 
-           	 placeholder="Seach for Channels" 
-           	 ng-change='rc.searchEntry()' 
-           	 class="form-control"
-           	 ng-model-options="{ updateOn: 'default blur' , debounce:  {'default': 500} }" />
+                <input type='text' ng-model='rc.searchText'
+                       placeholder="Seach for Channels"
+                       ng-change='rc.searchEntry()'
+                       class="form-control"
+                       ng-model-options="{ updateOn: 'default blur' , debounce:  {'default': 500} }" />
             </div>
         </div>
         <div class="row">
@@ -27,7 +27,7 @@
         </div>
         <div class="row radio-now-playing">
             <div class="col-xs-12 radio-current-channel">
-            	<h4 ng-show="rc.radioMgr.pgMgr.artistSelected === false">No Channel Selected</h4>
+                <h4 ng-show="rc.radioMgr.pgMgr.artistSelected === false">No Channel Selected</h4>
                 <h4 ng-show="rc.radioMgr.pgMgr.artistSelected === true && rc.radioMgr.pgMgr.artistTrackList.length===0">No tracks available for {{rc.radioMgr.pgMgr.selectedArtist.name}}</h4>
                 <h4 ng-show="rc.radioMgr.pgMgr.artistSelected === true && rc.radioMgr.pgMgr.artistTrackList.length!==0">Playing {{rc.radioMgr.pgMgr.artistTrackList.length}} track(s) from {{rc.radioMgr.pgMgr.selectedArtist.name}}</h4>
             </div>
