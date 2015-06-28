@@ -26,6 +26,9 @@
         }
 
 
+        $(document).ready(function(){
+            $("html, body").animate({ scrollTop: $(".top-songs").offset().top }, 500);
+        })
 
 
     }

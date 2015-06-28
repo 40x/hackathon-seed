@@ -20,96 +20,96 @@
   margin: 10px;
   background-color: red;
   height: 1px;
-  animation: move 0.5s infinite;
+  animation: move 0.4s infinite;
 }
 
 @-webkit-keyframes move {
   0%   {
-    background: linear-gradient(to right, red 10%, transparent);
-  }
-  25%  {
     background: linear-gradient(to right, red 50%, transparent);
   }
+  25%  {
+    background: linear-gradient(to right, red 90%, transparent);
+  }
   50%  {
-    background: linear-gradient(to right, red 30%, transparent);
+    background: linear-gradient(to right, red 0%, transparent);
   }
   75%  {
-    background: linear-gradient(to right, red 20%, transparent);
+    background: linear-gradient(to right, red 80%, transparent);
   }
   100% {
-    background: linear-gradient(to right, red 70%, transparent);
+    background: linear-gradient(to right, red 0%, transparent);
   }
 }
 
 @-moz-keyframes move {
   0%   {
-    background: linear-gradient(to right, red 10%, transparent);
-  }
-  25%  {
     background: linear-gradient(to right, red 50%, transparent);
   }
+  25%  {
+    background: linear-gradient(to right, red 90%, transparent);
+  }
   50%  {
-    background: linear-gradient(to right, red 30%, transparent);
+    background: linear-gradient(to right, red 0%, transparent);
   }
   75%  {
-    background: linear-gradient(to right, red 20%, transparent);
+    background: linear-gradient(to right, red 80%, transparent);
   }
   100% {
-    background: linear-gradient(to right, red 70%, transparent);
+    background: linear-gradient(to right, red 0%, transparent);
   }
 }
 
 @-o-keyframes move {
   0%   {
-    background: linear-gradient(to right, red 10%, transparent);
-  }
-  25%  {
     background: linear-gradient(to right, red 50%, transparent);
   }
+  25%  {
+    background: linear-gradient(to right, red 90%, transparent);
+  }
   50%  {
-    background: linear-gradient(to right, red 30%, transparent);
+    background: linear-gradient(to right, red 0%, transparent);
   }
   75%  {
-    background: linear-gradient(to right, red 20%, transparent);
+    background: linear-gradient(to right, red 80%, transparent);
   }
   100% {
-    background: linear-gradient(to right, red 70%, transparent);
+    background: linear-gradient(to right, red 0%, transparent);
   }
 }
 
 @-ms-keyframes move {
   0%   {
-    background: linear-gradient(to right, red 10%, transparent);
-  }
-  25%  {
     background: linear-gradient(to right, red 50%, transparent);
   }
+  25%  {
+    background: linear-gradient(to right, red 90%, transparent);
+  }
   50%  {
-    background: linear-gradient(to right, red 30%, transparent);
+    background: linear-gradient(to right, red 0%, transparent);
   }
   75%  {
-    background: linear-gradient(to right, red 20%, transparent);
+    background: linear-gradient(to right, red 80%, transparent);
   }
   100% {
-    background: linear-gradient(to right, red 70%, transparent);
+    background: linear-gradient(to right, red 0%, transparent);
   }
 }
 
 @keyframes move {
   0%   {
-    background: linear-gradient(to right, red 10%, transparent);
-  }
-  25%  {
     background: linear-gradient(to right, red 50%, transparent);
   }
+  25%  {
+    background: linear-gradient(to right, red 90%, transparent);
+  }
   50%  {
-    background: linear-gradient(to right, red 30%, transparent);
+    background: linear-gradient(to right, red 0%, transparent);
   }
   75%  {
-    background: linear-gradient(to right, red 20%, transparent);
+    background: linear-gradient(to right, red 80%, transparent);
   }
   100% {
-    background: linear-gradient(to right, red 70%, transparent);
+    background: linear-gradient(to right, red 0%, transparent);
   }
 }
 

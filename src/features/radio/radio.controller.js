@@ -84,6 +84,10 @@
                     .then(onOK);
             };
         }
+
+        $(document).ready(function(){
+            $("html, body").animate({ scrollTop: $(".radio").offset().top }, 500);
+        })
     }];
 
     angular.module('app.radio')

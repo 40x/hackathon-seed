@@ -21,7 +21,6 @@
         }
 
         function getNewSuccess(res) {
-            console.log(res);
             homeVm.newReleases = res.albums.items;
         }
 
@@ -58,6 +57,10 @@
         function error() {
             console.log('error')
         }
+
+        $(document).ready(function(){
+            $("html, body").animate({ scrollTop: $(".home-anchor").offset().top }, 500);
+        })
 
     }
 

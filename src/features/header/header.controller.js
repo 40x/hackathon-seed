@@ -31,7 +31,7 @@
             console.log(res);
         }
 
-        function onSelect($item, $model, $label) {
+        function onSelect() {
             $state.go('app.search', {searchText : headerVm.searchText});
         }
     }

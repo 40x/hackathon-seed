@@ -29,7 +29,9 @@
                 url: '^/app',
                 abstract: true,
                 views: {
-                    'leftNav@' : {templateUrl: 'src/features/left-nav/left-nav.html'},
+                    'leftNav@' : {templateUrl: 'src/features/left-nav/left-nav.html',
+                                    controller : 'LeftNavController',
+                                    controllerAs : 'lncVm'},
                     'header@' : {templateUrl: 'src/features/header/header.html',
                                  controller : 'HeaderController',
                                  controllerAs : 'headerVm'},

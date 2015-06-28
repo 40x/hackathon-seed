@@ -11,10 +11,12 @@
 
     function ArtistControllerFn(trackTransfer, spotifyService, $scope, $state){
         var ac = this;
-        ac.topSongs = [];
         ac.topSongs = trackTransfer.getTracks();
         if(!ac.topSongs) {
-            if(localStorage.getItem('artist-source') === 'top-songs')$state.go('app.topSongs');
+            if(localStorage.getItem('artist-source') === 'top-songs') {
+                $state.go('app.topSongs');
+                localStorage.removeItem('artist-source');
+            }
             else $state.go('app.genre');
         }
         ac.playSong = playSong;
@@ -57,9 +59,11 @@
             console.log(res);
         }
 
-        (ac.topSongs).forEach(function(e, i){
-            e.playing = false;
-        });
+        if(ac.topSongs) {
+            (ac.topSongs).forEach(function(e, i){
+                e.playing = false;
+            });
+        }
 
     }
 })(angular);

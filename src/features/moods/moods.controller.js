@@ -40,6 +40,10 @@
             genreVm.displayGenre = angular.copy(genreVm.content);
         }
 
+        $(document).ready(function(){
+            $("html, body").animate({ scrollTop: $(".moods-anchor").offset().top }, 500);
+        })
+
 
     }
 })();

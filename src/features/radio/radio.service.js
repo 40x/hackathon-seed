@@ -15,7 +15,7 @@
                     return prom.promise;
                 };
             }
-            self.token = "BQCmLu1Reuc51neQgNRWI9VMbepEARJH1NcKtGWzlwcv0C71qI_y3_apJrUTl8R-IOuIov-FslPywD7079HYchi8HYM520YqFpv1-_tbSKcSvWsEVHx5LbZJ9QxJIaD8OexDHfLRJhA";
+            self.token = "BQCFMyO0APhmbumzUBJyfhYQUSezdbrMrkVGEWOyRMHm0uNHSkuExgK4enAf0ng6wbEIWP3UjlGW2d1jOGcH8lfHU5gPEmSpqp6fzppwDwQXQ-sZm7e6xJ_m1K-zKqi8vB1Co7MmgJH7NLjIkbmd38crecSZSsnrA5SPQk4R3RQ3V5fzuVnNAsdADKbvosAEzZuaE6HqHMOjIB6wEimnJ8KQjvVxlJSbyeBtRk-hZ8QAtUncUre0GR2g_sPoHiBk8EnlIJxpUThtKbNzVapYajZderqSgGBub0IkmC596A";
             self.getSomeArtists = function(query) {
                 var request = {
                     url: 'https://api.spotify.com/v1/search',

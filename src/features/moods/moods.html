@@ -1,13 +1,8 @@
-<div ui-view></div>
-<div class="moods">
-    <div class="row" data-ng-if = "!genreVm.selectedGenre">
-        <div class="col-md-11 col-md-offset-1">
-            <div class="row">
-                <div ng-repeat="genre in genreVm.displayGenre" class="song-name text-center pointer"
-                    ng-click="genreVm.selectedGenre = genre.name; genreVm.tracks = null;  genreVm.getGenreById(genre.id)">
-                    <div ng-bind="genre.name | sanitize" class="vertical-center"></div>
-                </div>
-            </div>
+<div class="moods-anchor">
+    <div class="moods row" data-ng-if = "!genreVm.selectedGenre">
+        <div ng-repeat="genre in genreVm.displayGenre" class="song-name text-center pointer"
+             ng-click="genreVm.selectedGenre = genre.name; genreVm.tracks = null;  genreVm.getGenreById(genre.id)">
+            <div ng-bind="genre.name | sanitize" class="vertical-center"></div>
         </div>
     </div>
 </div>

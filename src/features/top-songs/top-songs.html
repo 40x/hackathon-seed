@@ -1,8 +1,10 @@
 <div class="top-songs clearfix">
-    <div    ng-repeat="s in sl.topSongs" class="song-name vertical-center text-center pointer"
+    <div    ng-repeat="s in sl.topSongs" class="song-name text-center pointer"
             ng-show="sl.currentStatename === 'app.topSongs'"
             ng-click="sl.showTracks(s.content)">
-        {{s.content.name || s.content.title}}
+       <div ng-bind="s.content.name || s.content.title" class="vertical-center">
+
+       </div>
     </div>
 
 

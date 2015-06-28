@@ -20,6 +20,9 @@
             $state.go('app.artist', {artist : list.name});
         }
 
+        $(document).ready(function(){
+            $("html, body").animate({ scrollTop: $(".playlist-anchor").offset().top }, 500);
+        })
 
     }
 })();
